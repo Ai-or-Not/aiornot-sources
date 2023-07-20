@@ -1,0 +1,126 @@
+#results {
+	display: grid;
+	grid-template-columns: repeat(4, 182px);
+	grid-template-rows: 182px;
+	gap: 24px;
+}
+
+.request-item {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.request-item:hover {
+	box-sizing: border-box;
+	outline: 2px solid #adff00;
+}
+
+.request-item:hover > .request-item-share {
+	opacity: 1 !important;
+}
+
+.request-item:hover > #request-item-controls {
+	display: flex !important;
+}
+.request-item > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.request-item-share {
+	position: absolute;
+	bottom: 2px;
+	left: 2px;
+	color: white;
+	font-family: 'Space Grotesk';
+	text-align: right;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%;
+	padding: 2px 8px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: #18181b;
+	cursor: pointer;
+}
+
+.request-item-verdict {
+	position: absolute;
+	bottom: 2px;
+	right: 2px;
+	color: #10151d;
+	text-align: right;
+	font-family: 'Space Grotesk';
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 160%;
+	background: #adff00;
+	padding: 2px 8px;
+}
+
+#refresh-api-key {
+	border: 1px solid #adff00 !important;
+}
+
+#request-item-controls {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 40px;
+	width: 92px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#request-item-controls > button {
+	width: 40px;
+	height: 40px;
+	border: none;
+	background: none;
+	cursor: pointer;
+	background: #10151d;
+	&:hover {
+		opacity: 0.8;
+	}
+	&:first-child {
+		border: 1px solid #adff00;
+	}
+	&:last-child {
+		border: 1px solid #ff4651;
+	}
+}
+
+.feedback-alert {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+	padding: 0px 16px;
+}
+.feedback-alert__correct {
+	background: #adff00;
+}
+.feedback-alert__incorrect {
+	background: #ff4651;
+}
+
+.feedback-alert > span {
+	color: #10151d;
+	font-family: 'Space Grotesk';
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 120%;
+	text-transform: uppercase;
+}
